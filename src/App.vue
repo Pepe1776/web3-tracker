@@ -22,9 +22,14 @@
         </thead>
         <tbody>
           <tr v-for="(coin, index) in filteredCoins" :key="coin.id">
-            <td class="text-muted">{{ index }}</td>
+            <td class="text-muted">{{ index + 1 }}</td>
             <td>
-              <img :src="coin.image" :alt="coin.name" style="width: 2rem" class="me-2" />
+              <img
+                :src="coin.image"
+                :alt="coin.name"
+                style="width: 2rem"
+                class="me-2"
+              />
               <span>
                 {{ coin.name }}
               </span>
@@ -64,7 +69,7 @@ export default {
   },
   async mounted() {
     const res = await fetch(
-      "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false"
+      "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false"
     );
     const data = await res.json();
     this.coins = data;
@@ -82,5 +87,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>
