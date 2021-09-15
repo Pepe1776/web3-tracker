@@ -1,5 +1,9 @@
 # vuejs-crypto-ticker
 
+Crypto price tracker built in Vue using CoinGecko API
+
+![alt text](./docs/Screenshot_1.png)
+
 ## Project setup
 
 ```

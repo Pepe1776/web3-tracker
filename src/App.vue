@@ -37,7 +37,7 @@
                 {{ coin.symbol }}
               </span>
             </td>
-            <td>{{ coin.current_price.toLocaleString() }}</td>
+            <td>${{ coin.current_price.toLocaleString() }}</td>
             <td
               :class="[
                 coin.price_change_percentage_24h > 0
@@ -45,9 +45,9 @@
                   : 'text-danger',
               ]"
             >
-              {{ coin.price_change_percentage_24h }}
+              {{ coin.price_change_percentage_24h }} %
             </td>
-            <td>{{ coin.total_volume.toLocaleString() }}</td>
+            <td>${{ coin.total_volume.toLocaleString() }}</td>
           </tr>
         </tbody>
       </table>
