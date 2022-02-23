@@ -1,4 +1,5 @@
 body {
-	background:#141414;
-	color: #fff;
+	background: rgb(34,193,195);
+	background: linear-gradient(500deg, rgba(34,193,195,1) 0%, rgba(109,253,45,1) 100%);
+	font-size: 24px;
 }

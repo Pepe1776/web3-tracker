@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="row">
-      <h1>CoinMarket</h1>
+      <h1 class="title d-flex justify-content-center">Crypto Tracker</h1>
 
       <input
         type="text"
@@ -11,8 +11,8 @@
         @keyup="searchCoin()"
         autofocus
       />
-
-      <table class="table table-hover table-dark text-light">
+<div class="table-responsive">
+      <table class="table-responsive table table-hover table-dark text-light">
         <thead>
           <tr>
             <th v-for="(title, index) in titles" :key="index">
@@ -51,6 +51,7 @@
           </tr>
         </tbody>
       </table>
+      </div>
     </div>
   </div>
 </template>
@@ -74,6 +75,7 @@ export default {
     const data = await res.json();
     this.coins = data;
     this.filteredCoins = data;
+    console.log(data);
   },
   methods: {
     searchCoin() {
@@ -87,4 +89,12 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap');
+* {
+  font-family: 'Rajdhani', sans-serif;
+}
+.title {
+  font-size: 56px;
+}
+</style>
